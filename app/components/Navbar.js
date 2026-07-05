@@ -30,12 +30,13 @@ export default function Navbar() {
         
         {/* Desktop Menu - ครบถ้วนทุกหน้าตามบรีฟ */}
         <div className="hidden lg:flex items-center space-x-6 text-xs font-extrabold text-slate-700">
-          <Link href="/#home" className="hover:text-blue-600 transition">หน้าแรก</Link>
-          <Link href="/#about" className="hover:text-blue-600 transition">เกี่ยวกับวิทยาลัย</Link>
-          <Link href="/#projects" className="hover:text-blue-600 transition">ข่าวประชาสัมพันธ์</Link>
+          <Link href="/" className="hover:text-blue-600 transition">หน้าแรก</Link>
+          <Link href="/about" className="hover:text-blue-600 transition">เกี่ยวกับวิทยาลัย</Link>
+          <Link href="/news" className="hover:text-blue-600 transition">ข่าวประชาสัมพันธ์</Link>
           <Link href="/personnel" className="hover:text-blue-600 transition">บุคลากร</Link>
           <Link href="/departments" className="hover:text-blue-600 transition">แผนกวิชา</Link>
           <Link href="/contact" className="hover:text-blue-600 transition">ติดต่อเรา</Link>
+          <Link href="/admin" className="text-blue-600 hover:text-blue-700 transition flex items-center gap-1">แผงควบคุม 🔐</Link>
         </div>
 
         {/* ปุ่มเด่นบนขวา */}
@@ -61,13 +62,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="lg:hidden bg-white border-t px-6 py-4 space-y-3 shadow-lg font-bold text-sm">
-          <Link href="/#home" onClick={() => setIsOpen(false)} className="block text-blue-600">หน้าแรก</Link>
-          <Link href="/#about" onClick={() => setIsOpen(false)} className="block text-slate-700">เกี่ยวกับวิทยาลัย</Link>
-          <Link href="/#projects" onClick={() => setIsOpen(false)} className="block text-slate-700">ข่าวประชาสัมพันธ์</Link>
+        <div className="lg:hidden bg-white border-t px-6 py-4 space-y-3 shadow-lg font-bold text-sm text-slate-750">
+          <Link href="/" onClick={() => setIsOpen(false)} className="block text-blue-600">หน้าแรก</Link>
+          <Link href="/about" onClick={() => setIsOpen(false)} className="block text-slate-700">เกี่ยวกับวิทยาลัย</Link>
+          <Link href="/news" onClick={() => setIsOpen(false)} className="block text-slate-700">ข่าวประชาสัมพันธ์</Link>
           <Link href="/personnel" onClick={() => setIsOpen(false)} className="block text-slate-700">บุคลากร</Link>
           <Link href="/departments" onClick={() => setIsOpen(false)} className="block text-slate-700">แผนกวิชา</Link>
           <Link href="/contact" onClick={() => setIsOpen(false)} className="block text-slate-700">ติดต่อเรา</Link>
+          <Link href="/admin" onClick={() => setIsOpen(false)} className="block text-blue-600">แผงควบคุม 🔐</Link>
         </div>
       )}
     </nav>
